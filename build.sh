@@ -145,7 +145,7 @@ if [ -f "$IPA_IN" ]; then
 	shopt -s nullglob
 	for ext_mk in OpenInFacebookSafariExtension/*/Makefile; do
 		ext_dir="$(dirname "$ext_mk")"
-		echo "==> Building Safari web extension in $ext_dir…"
+		echo "==> Building Safari web extension in ${ext_dir}…"
 		make -C "$ext_dir" FINALPACKAGE=1 >/dev/null
 		# Only the final bundle at .theos/obj/*.appex carries the resources and
 		# Info.plist; the per-arch intermediates under obj/<arch>/ hold just the
